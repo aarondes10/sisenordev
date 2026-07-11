@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Si Señor Mexican Restaurant | Morgan City, LA</title>
+<meta name="description" content="Si Señor Mexican Restaurant in Morgan City, Louisiana. Homestyle Mexican cooking, margaritas, and a porch full of folk art.">
+<link rel="icon" type="image/png" href="images/logo_small.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,900;1,600;1,900&family=Work+Sans:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <img src="images/logo.png" alt="Si Señor Mexican Restaurant logo" class="brand-logo">
+      <span class="brand-text">
+        <span class="brand-name">Si Señor</span>
+        <span class="brand-sub">Mexican Restaurant</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#menu">Menu</a>
+      <a href="#hours">Hours &amp; Location</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="tel:9854126780" class="nav-call">Call (985) 412-6780</a>
+    </nav>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-bg" style="background-image:url('images/hero-storefront.jpg')"></div>
+    <div class="hero-scrim"></div>
+    <svg class="hero-sunburst" viewBox="0 0 400 400" aria-hidden="true">
+      <g id="sunburst-rays"></g>
+    </svg>
+
+    <div class="hero-content">
+      <h1 class="hero-title">Si Señor</h1>
+      <p class="hero-tagline">Come try our Traditional Mexican food & a little taste of Tex-Mex with our thirst quenching Margarita's 🍸🪇</p>
+
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn--yellow">View the Menu</a>
+        <a href="tel:9854126780" class="btn btn--outline">Call (985) 412-6780</a>
+      </div>
+
+      <div class="status-badge" id="status-badge">
+        <span class="status-dot" id="status-dot"></span>
+        <span id="status-text">Checking hours…</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- scalloped bunting divider -->
+  <div class="bunting" aria-hidden="true"></div>
+
+  <!-- ============ HOURS & LOCATION ============ -->
+  <section class="hours-section" id="hours">
+    <div class="section-inner hours-grid">
+      <div class="hours-card">
+        <div class="hours-card-band">Hours</div>
+        <ul class="hours-list">
+          <li><span>Monday – Saturday</span><span>11:00 AM – 2:00 PM</span></li>
+          <li class="hours-list-sub"><span></span><span>5:00 PM – 8:00 PM</span></li>
+          <li class="hours-closed"><span>Sunday</span><span>Closed</span></li>
+        </ul>
+        <p class="hours-live" id="hours-live"></p>
+      </div>
+
+      <div class="location-block">
+        <p class="eyebrow">Visit Us</p>
+        <h2 class="section-title section-title--light">Find Si Señor</h2>
+        <p class="location-address">1201 Bellview St<br>Morgan City, LA 70380</p>
+        <p class="location-phone"><a href="tel:9854126780">(985) 412-6780</a></p>
+        <a class="btn btn--yellow" href="https://www.google.com/maps/search/?api=1&query=1201+Bellview+St+Morgan+City+LA+70380" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section class="menu-section" id="menu">
+    <div class="section-inner">
+      <p class="eyebrow">From the Kitchen</p>
+      <h2 class="section-title">Our Menu</h2>
+      <p class="menu-note">A taste of what's cooking — for current selections and exact pricing, see our full printed menu below.</p>
+
+      <div class="menu-tabs" id="menu-tabs">
+        <button class="menu-tab" data-filter="all">All</button>
+        <button class="menu-tab" data-filter="apps">Appetizers &amp; Nachos</button>
+        <button class="menu-tab" data-filter="salads">Salads</button>
+        <button class="menu-tab" data-filter="soup">Soups &amp; Ceviche</button>
+        <button class="menu-tab" data-filter="eggs">Egg Dishes</button>
+        <button class="menu-tab" data-filter="enchiladas">Enchiladas</button>
+        <button class="menu-tab" data-filter="burritos">Burritos &amp; Chimichangas</button>
+        <button class="menu-tab" data-filter="grill">The Grill</button>
+        <button class="menu-tab" data-filter="favorites">Favorite Dishes</button>
+        <button class="menu-tab" data-filter="burgers">Burgers &amp; Po-Boys</button>
+        <button class="menu-tab active" data-filter="combos">Lunch Combos</button>
+        <button class="menu-tab" data-filter="dessert">Desserts &amp; A La Carta</button>
+      </div>
+
+      <div class="menu-grid" id="menu-grid">
+
+        <!-- APPETIZERS & NACHOS -->
+        <article class="dish-card" data-category="apps">
+          <span class="dish-card-band band--yellow"></span>
+          <h3 class="dish-name">Guacamole Dip <span class="price">$10.95</span></h3>
+          <p class="dish-desc">A fresh blend of avocados, onions, tomatoes, cilantro, and lime juice. Served with flour chips.</p>
+        </article>
+
+        <article class="dish-card" data-category="apps">
+          <span class="dish-card-band band--yellow"></span>
+          <h3 class="dish-name">Sí Señor Queso Dip <span class="price">$11.95</span></h3>
+          <p class="dish-desc">Freshly made traditional cheese dip with seasoned ground meat, guacamole, and pico de gallo. Served with flour chips.</p>
+        </article>
+
+        <article class="dish-card" data-category="apps">
+          <span class="dish-card-band band--yellow"></span>
+          <h3 class="dish-name">Sopes <span class="price">$12.95</span></h3>
+          <p class="dish-desc">Corn masa cakes topped with refried beans — one each with ground beef, chicken, and pork, plus lettuce, tomatoes, avocado, pickled carrots, sour cream, and queso fresco.</p>
+        </article>
+
+        <article class="dish-card" data-category="apps">
+          <span class="dish-card-band band--yellow"></span>
+          <h3 class="dish-name">Tostadas <span class="price">$12.95</span></h3>
+          <p class="dish-desc">Crispy corn tortillas topped with refried beans — one each with ground meat, chicken, and pork, plus lettuce, tomatoes, avocado, pickled carrots, and sour cream. Served with a cup of charro beans.</p>
+        </article>
+
+        <article class="dish-card" data-category="apps">
+          <span class="dish-card-band band--yellow"></span>
+          <h3 class="dish-name">Sí Señor Sampler <span class="price">$16.95</span></h3>
+          <p class="dish-desc">Cheese quesadillas, Sí Señor nachos, flautas, and pastor tacos al carbón. Served with guacamole, pico de gallo, sour cream, and queso dip.</p>
+        </article>
+
+        <article class="dish-card" data-category="apps">
+          <span class="dish-card-band band--yellow"></span>
+          <h3 class="dish-name">Quesadillas <span class="price">from $11.95</span></h3>
+          <p class="dish-desc">Flour tortillas filled with cheese, grilled onions, tomatoes, and jalapeños. Cheese, chicken, al pastor pork, steak, or shrimp.</p>
+        </article>
+
+        <article class="dish-card" data-category="apps">
+          <span class="dish-card-band band--yellow"></span>
+          <h3 class="dish-name">Shrimp Cocktail <span class="price">$12.95</span></h3>
+          <p class="dish-desc">Gulf shrimp in a traditional fresh Mexican-style cocktail sauce. Served with saltine crackers.</p>
+        </article>
+
+        <article class="dish-card" data-category="apps">
+          <span class="dish-card-band band--yellow"></span>
+          <h3 class="dish-name">Ceviche <span class="price">$12.95</span></h3>
+          <p class="dish-desc">Fresh tilapia diced and marinated in lime juice and spices with onions, cilantro, tomatoes, and avocado.</p>
+        </article>
+
+        <article class="dish-card" data-category="apps">
+          <span class="dish-card-band band--yellow"></span>
+          <h3 class="dish-name">Traditional Nachos <span class="price">$13.95 / $10.95</span></h3>
+          <p class="dish-desc">Seasoned ground meat, beans, and jack n' cheddar cheese. Served with guacamole, pico de gallo, sour cream, jalapeños, and a cup of charro bean soup.</p>
+        </article>
+
+        <article class="dish-card" data-category="apps">
+          <span class="dish-card-band band--yellow"></span>
+          <h3 class="dish-name">Fiesta Nachos <span class="price">$14.95 / $11.95</span></h3>
+          <p class="dish-desc">Chicken fajita, steak fajita, and al pastor pork fajita nachos. Served with guacamole, pico de gallo, sour cream, and a cup of charro bean soup.</p>
+        </article>
+
+        <article class="dish-card" data-category="apps">
+          <span class="dish-card-band band--yellow"></span>
+          <h3 class="dish-name">Sí Señor Nachos <span class="price">$12.95</span></h3>
+          <p class="dish-desc">A large pile of crispy corn tortilla chips topped with queso dip and your choice of ground meat or seasoned chicken, with tomatoes, jalapeños, sour cream, and guacamole.</p>
+        </article>
+
+        <!-- SALADS -->
+        <article class="dish-card" data-category="salads">
+          <span class="dish-card-band band--pink"></span>
+          <h3 class="dish-name">Fajita Salad <span class="price">$12.95</span></h3>
+          <p class="dish-desc">Crisp lettuce mix topped with your choice of grilled chicken or steak fajita, grilled onions, bell peppers, and jack n' cheddar cheese. Shrimp add $2.</p>
+        </article>
+
+        <article class="dish-card" data-category="salads">
+          <span class="dish-card-band band--pink"></span>
+          <h3 class="dish-name">Chicken Caesar Salad <span class="price">$12.95</span></h3>
+          <p class="dish-desc">Grilled chicken strips on crisp lettuce tossed in Caesar dressing, topped with avocado and Mexican cotija cheese. Shrimp add $2.</p>
+        </article>
+
+        <article class="dish-card" data-category="salads">
+          <span class="dish-card-band band--pink"></span>
+          <h3 class="dish-name">Taco Salad <span class="price">$11.95</span></h3>
+          <p class="dish-desc">A crispy flour tortilla shell filled with ground meat, lettuce, tomatoes, avocado, jack n' cheddar cheese, and sour cream. Grilled chicken, steak, or shrimp add $2.</p>
+        </article>
+
+        <!-- SOUPS & CEVICHE -->
+        <article class="dish-card" data-category="soup">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Shrimp Ceviche <span class="price">$14.95</span></h3>
+          <p class="dish-desc">Fresh shrimp diced and marinated in lime juice and spices with onion, tomatoes, cucumbers, and avocado in a special clamato sauce.</p>
+        </article>
+
+        <article class="dish-card" data-category="soup">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Pozole <span class="price">$12.95</span></h3>
+          <p class="dish-desc">Mexican pork soup with hominy, topped with shredded lettuce, radishes, and onions. Served with a tostada, avocado, and salsas roja and verde.</p>
+        </article>
+
+        <article class="dish-card" data-category="soup">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Menudo <span class="price">$12.95</span></h3>
+          <p class="dish-desc">Mexican beef tripe soup with roasted dried peppers, onions, and oregano. Served with tortillas and salsas roja and verde.</p>
+        </article>
+
+        <article class="dish-card" data-category="soup">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Caldo de Camarón <span class="price">$14.95</span></h3>
+          <p class="dish-desc">Beach-style shrimp soup flavored with dried guajillo peppers and spices. Served with a guacamole tostada, queso fresco, and Mexican rice.</p>
+        </article>
+
+        <article class="dish-card" data-category="soup">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Sopa de Tortilla <span class="price">$7.95 / $5.95</span></h3>
+          <p class="dish-desc">Home-made chicken tortilla soup topped with jack cheese, avocado, and crispy tortilla strips.</p>
+        </article>
+
+        <!-- EGG DISHES -->
+        <article class="dish-card" data-category="eggs">
+          <span class="dish-card-band band--green"></span>
+          <h3 class="dish-name">Mexican-Style Eggs <span class="price">$12.95</span></h3>
+          <p class="dish-desc">Scrambled eggs with tomatoes, onions, cilantro, and fresh jalapeños. Served with Mexican rice, refried beans, queso fresco, and tortillas.</p>
+        </article>
+
+        <article class="dish-card" data-category="eggs">
+          <span class="dish-card-band band--green"></span>
+          <h3 class="dish-name">Ranchero-Style Eggs <span class="price">$12.95</span></h3>
+          <p class="dish-desc">Two fried eggs smothered in mild ranchera sauce. Served with Mexican rice, refried beans, queso fresco, and tortillas.</p>
+        </article>
+
+        <article class="dish-card" data-category="eggs">
+          <span class="dish-card-band band--green"></span>
+          <h3 class="dish-name">Huevos con Chorizo <span class="price">$12.95</span></h3>
+          <p class="dish-desc">Scrambled eggs with chorizo. Served with Mexican rice, refried beans, queso fresco, and tortillas.</p>
+        </article>
+
+        <article class="dish-card" data-category="eggs">
+          <span class="dish-card-band band--green"></span>
+          <h3 class="dish-name">Huevos con Machaca <span class="price">$12.95</span></h3>
+          <p class="dish-desc">Scrambled eggs with shredded beef, tomatoes, onions, and jalapeños. Served with Mexican rice, refried beans, queso fresco, and tortillas.</p>
+        </article>
+
+        <!-- ENCHILADAS -->
+        <article class="dish-card" data-category="enchiladas">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Beef Enchiladas <span class="price">$14.95</span></h3>
+          <p class="dish-desc">Ground beef enchiladas topped with enchilada sauce and jack n' cheddar cheese. Served with Mexican rice and refried beans.</p>
+        </article>
+
+        <article class="dish-card" data-category="enchiladas">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Cheese Enchiladas <span class="price">$14.95</span></h3>
+          <p class="dish-desc">Cheese enchiladas topped with enchilada sauce and jack n' cheddar cheese. Served with Mexican rice and refried beans.</p>
+        </article>
+
+        <article class="dish-card" data-category="enchiladas">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Enchiladas Suizas <span class="price">$14.95</span></h3>
+          <p class="dish-desc">Chicken enchiladas in a creamy green tomatillo sauce, topped with Monterrey jack cheese and sour cream.</p>
+        </article>
+
+        <article class="dish-card" data-category="enchiladas">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Seafood Enchiladas <span class="price">$14.95</span></h3>
+          <p class="dish-desc">Enchiladas filled with seafood, topped with Monterrey sauce. Served with Mexican rice, refried beans, and sour cream.</p>
+        </article>
+
+        <article class="dish-card" data-category="enchiladas">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Enchiladas de Molé <span class="price">$14.95</span></h3>
+          <p class="dish-desc">Chicken enchiladas with molé sauce, topped with Monterrey jack cheese, fresh onion rings, and avocado slices.</p>
+        </article>
+
+        <article class="dish-card" data-category="enchiladas">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Sí Señor Enchiladas <span class="price">$14.95</span></h3>
+          <p class="dish-desc">One cheese, one beef, and one chicken suiza enchilada. Served with Mexican rice, refried beans, and sour cream.</p>
+        </article>
+
+        <!-- BURRITOS & CHIMICHANGAS -->
+        <article class="dish-card" data-category="burritos">
+          <span class="dish-card-band band--green"></span>
+          <h3 class="dish-name">Burrito Flaco <span class="price">$12.95</span></h3>
+          <p class="dish-desc">A large flour tortilla filled with ground beef and refried beans, topped with chile con carne sauce and jack and cheddar cheese.</p>
+        </article>
+
+        <article class="dish-card" data-category="burritos">
+          <span class="dish-card-band band--green"></span>
+          <h3 class="dish-name">Burrito Gordo <span class="price">$13.95</span></h3>
+          <p class="dish-desc">Stuffed with ground beef and refried beans, topped with chile con carne sauce, lettuce, tomatoes, jalapeños, sour cream, and jack n' cheddar cheese.</p>
+        </article>
+
+        <article class="dish-card" data-category="burritos">
+          <span class="dish-card-band band--green"></span>
+          <h3 class="dish-name">Seafood Burrito <span class="price">$14.95</span></h3>
+          <p class="dish-desc">Filled with seafood and Mexican rice, topped with Monterrey sauce and Monterrey jack cheese.</p>
+        </article>
+
+        <article class="dish-card" data-category="burritos">
+          <span class="dish-card-band band--green"></span>
+          <h3 class="dish-name">Fajita Burrito <span class="price">$15.95</span></h3>
+          <p class="dish-desc">Stuffed with chicken, steak, or pork fajitas, grilled onions and bell peppers, topped with enchilada sauce and queso dip. Shrimp add $2.</p>
+        </article>
+
+        <article class="dish-card" data-category="burritos">
+          <span class="dish-card-band band--green"></span>
+          <h3 class="dish-name">Seafood Chimi <span class="price">$14.95</span></h3>
+          <p class="dish-desc">A large flour tortilla filled with seafood and Mexican rice, fried till golden and crispy on top of Monterrey sauce and queso dip.</p>
+        </article>
+
+        <article class="dish-card" data-category="burritos">
+          <span class="dish-card-band band--green"></span>
+          <h3 class="dish-name">Fajita Chimi <span class="price">$15.95</span></h3>
+          <p class="dish-desc">Chicken, steak, or pork fajitas with grilled onions and bell peppers, fried golden on top of enchilada sauce and queso dip. Shrimp add $2.</p>
+        </article>
+
+        <article class="dish-card" data-category="burritos">
+          <span class="dish-card-band band--green"></span>
+          <h3 class="dish-name">Sí Señor Chimi Dinner <span class="price">$14.95</span></h3>
+          <p class="dish-desc">Stuffed with seasoned shredded beef, fried till golden and crispy, with enchilada sauce and shredded jack n' cheddar cheese.</p>
+        </article>
+
+        <article class="dish-card" data-category="burritos">
+          <span class="dish-card-band band--green"></span>
+          <h3 class="dish-name">Birria Chimi <span class="price">$16.95</span></h3>
+          <p class="dish-desc">Stuffed with beef birria, onions, cilantro, and Monterrey jack, fried golden and crispy. Served with a flavorful consommé, Mexican rice, guacamole, and pico de gallo.</p>
+        </article>
+
+        <!-- THE GRILL -->
+        <article class="dish-card" data-category="grill">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Fajitas <span class="price">$15.95 – $17.95</span></h3>
+          <p class="dish-desc">Chicken, pork, steak, or shrimp with grilled onions and bell peppers. Served with guacamole, pico de gallo, sour cream, charro beans, and tortillas.</p>
+        </article>
+
+        <article class="dish-card" data-category="grill">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Carnitas Platter <span class="price">$17.95</span></h3>
+          <p class="dish-desc">Traditional Mexican dish of tender, slow-cooked pork. Served with guacamole, pico de gallo, charro beans, rajas con crema, Mexican rice, tortillas, and spicy salsas.</p>
+        </article>
+
+        <article class="dish-card" data-category="grill">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Fiesta-Grill Sí Señor <span class="price">$31.95</span></h3>
+          <p class="dish-desc">Serves two. Grilled chicken, pork, steak, and shrimp fajitas with chorizo, grilled onions and bell peppers, plus all the fixings.</p>
+        </article>
+
+        <article class="dish-card" data-category="grill">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Rib Eye Sí Señor <span class="price">$23.95</span></h3>
+          <p class="dish-desc">Grilled choice rib eye in a sauce of roasted, mild dried peppers, garlic, and onions. Served with charro beans, guacamole, pico de gallo, Mexican rice, and tortillas.</p>
+        </article>
+
+        <article class="dish-card" data-category="grill">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Cochinita Tacos <span class="price">$17.95</span></h3>
+          <p class="dish-desc">Pulled pork marinated and cooked Yucatán style, topped with fresh onions and cilantro. Served with pickled carrots, guacamole, charro beans, and Mexican rice.</p>
+        </article>
+
+        <article class="dish-card" data-category="grill">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Carne Asada <span class="price">$23.95</span></h3>
+          <p class="dish-desc">Grilled choice rib eye served with two cheese enchiladas, rajas con crema, guacamole, pico de gallo, Mexican rice, refried beans, and tortillas.</p>
+        </article>
+
+        <article class="dish-card" data-category="grill">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Pollo Sí Señor <span class="price">$17.95</span></h3>
+          <p class="dish-desc">Grilled chicken breast in a sauce of roasted, mild dried peppers, garlic, and onions. Served with charro beans, guacamole, pico de gallo, Mexican rice, and tortillas.</p>
+        </article>
+
+        <article class="dish-card" data-category="grill">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Milaneza <span class="price">$18.95</span></h3>
+          <p class="dish-desc">Breaded chicken breast or steak, fried golden, served with Mexican rice, refried beans, side salad, grilled potatoes, and ranchera sauce.</p>
+        </article>
+
+        <article class="dish-card" data-category="grill">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Pollo Asado <span class="price">$17.95</span></h3>
+          <p class="dish-desc">Grilled chicken breast served with rajas con crema, Mexican rice, refried beans, pico de gallo, guacamole, and tortillas.</p>
+        </article>
+
+        <article class="dish-card" data-category="grill">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Grilled Fish or Shrimp Tacos <span class="price">$15.95</span></h3>
+          <p class="dish-desc">Grilled tilapia or shrimp soft tacos brushed with a mild chipotle dressing, topped with lettuce, tomatoes, and shredded jack n' cheddar cheese.</p>
+        </article>
+
+        <article class="dish-card" data-category="grill">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Al Carbón Dinner <span class="price">$16.95</span></h3>
+          <p class="dish-desc">Grilled steak or al pastor pork tacos topped with onions, cilantro, and Monterrey jack cheese, with rice, charro beans, and salsas.</p>
+        </article>
+
+        <article class="dish-card" data-category="grill">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Street Tacos <span class="price">$16.95</span></h3>
+          <p class="dish-desc">Beef tongue or barbacoa tacos topped with onions and cilantro. Served with Mexican rice, charro beans, guacamole, and spicy salsas.</p>
+        </article>
+
+        <article class="dish-card" data-category="grill">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Birria Tacos <span class="price">$16.95</span></h3>
+          <p class="dish-desc">Beef birria tacos topped with onions, cilantro, and Monterrey jack cheese. Served with Mexican rice, birria consommé, guacamole, and spicy salsas.</p>
+        </article>
+
+        <!-- FAVORITE DISHES -->
+        <article class="dish-card" data-category="favorites">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Tamales <span class="price">$15.95</span></h3>
+          <p class="dish-desc">Three pork tamales served with Mexican rice and beans, topped with your choice of chile con carne or ranchero sauce and jack n' cheddar cheese.</p>
+        </article>
+
+        <article class="dish-card" data-category="favorites">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Pollo con Molé <span class="price">$15.95</span></h3>
+          <p class="dish-desc">Grilled chicken breast over rice smothered in molé sauce, topped with fresh onion rings and avocado slices.</p>
+        </article>
+
+        <article class="dish-card" data-category="favorites">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Flautas de Pollo <span class="price">$15.95</span></h3>
+          <p class="dish-desc">Four crispy, rolled corn tortillas filled with shredded chicken, topped with lettuce, tomatoes, avocado, sour cream, and fresh Mexican cheese.</p>
+        </article>
+
+        <article class="dish-card" data-category="favorites">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Fajita Rellena <span class="price">$18.95</span></h3>
+          <p class="dish-desc">Grilled steak or chicken fajita wrapped around a roasted poblano pepper filled with jack n' cheddar cheese, topped with enchilada sauce and queso dip.</p>
+        </article>
+
+        <article class="dish-card" data-category="favorites">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Rib Eye a la Mexicana <span class="price">$23.95</span></h3>
+          <p class="dish-desc">Grilled choice rib eye topped with salsa mexicana made with tomatoes, onions, cilantro, and fresh jalapeños.</p>
+        </article>
+
+        <article class="dish-card" data-category="favorites">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Arroz con Pollo <span class="price">$16.95</span></h3>
+          <p class="dish-desc">Grilled chicken breast on a bed of Mexican rice topped with queso dip. Served with charro beans, pico de gallo, guacamole, and sour cream.</p>
+        </article>
+
+        <article class="dish-card" data-category="favorites">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Chile Relleno <span class="price">$15.95</span></h3>
+          <p class="dish-desc">A roasted, mild poblano pepper stuffed with ground meat, egg-battered and fried golden, topped with Monterrey sauce and jack n' cheddar cheese.</p>
+        </article>
+
+        <article class="dish-card" data-category="favorites">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Chilaquiles <span class="price">$16.95</span></h3>
+          <p class="dish-desc">Tortilla strips smothered in ranchera sauce with shredded chicken, topped with sour cream, queso fresco, and avocado. Choice of fried eggs or grilled fajita steak.</p>
+        </article>
+
+        <article class="dish-card" data-category="favorites">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Shrimp or Tilapia Sí Señor <span class="price">$17.95</span></h3>
+          <p class="dish-desc">Grilled shrimp or tilapia in a sauce of mild, roasted dried peppers, garlic, and onions. Served over Mexican rice with charro beans and guacamole.</p>
+        </article>
+
+        <article class="dish-card" data-category="favorites">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Fried Shrimp <span class="price">$17.95</span></h3>
+          <p class="dish-desc">Lightly-battered fried shrimp served over Mexican rice with a house salad, queso dip, and ranchera sauce for dipping.</p>
+        </article>
+
+        <article class="dish-card" data-category="favorites">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Camarones a la Mexicana <span class="price">$17.95</span></h3>
+          <p class="dish-desc">Shrimp in salsa mexicana made with tomatoes, onions, cilantro, and fresh jalapeños. Served with Mexican rice, refried beans, and guacamole.</p>
+        </article>
+
+        <article class="dish-card" data-category="favorites">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Deviled Shrimp <span class="price">$17.95</span></h3>
+          <p class="dish-desc">Traditional shrimp a la diabla cooked in a spicy sauce of dried peppers and garlic. Served with Mexican rice, refried beans, and guacamole.</p>
+        </article>
+
+        <article class="dish-card" data-category="favorites">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Seafood Platter <span class="price">$21.95</span></h3>
+          <p class="dish-desc">Grilled or fried tilapia and shrimp in a mild guajillo pepper sauce over Mexican rice, with a tilapia ceviche and a shrimp cocktail on the side.</p>
+        </article>
+
+        <!-- BURGERS & PO-BOYS -->
+        <article class="dish-card" data-category="burgers">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Fiesta Burger <span class="price">$12.95</span></h3>
+          <p class="dish-desc">Large home-made grilled beef patty on a Kaiser bun with grilled onions, jack n' cheddar cheese, lettuce, tomatoes, avocado, and apple wood smoked bacon. Served with waffle fries.</p>
+        </article>
+
+        <article class="dish-card" data-category="burgers">
+          <span class="dish-card-band band--turquoise"></span>
+          <h3 class="dish-name">Mexican Po-Boy <span class="price">$12.95</span></h3>
+          <p class="dish-desc">French bread filled with marinated slow-cooked pork, special dressing, shredded lettuce, tomatoes, avocado, and fresh Mexican cheese. Served with waffle fries.</p>
+        </article>
+
+        <!-- LUNCH COMBOS — compact list card -->
+        <article class="dish-card dish-card--list" data-category="combos">
+          <span class="dish-card-band band--pink"></span>
+          <h3 class="dish-name">Lunch Combos <span class="price">$12.95 each</span></h3>
+          <p class="dish-desc">All combos served with Mexican rice and beans unless noted.</p>
+          <ul class="combo-list">
+            <li><strong>#1 Fish Tacos</strong> — Two grilled tilapia tacos</li>
+            <li><strong>#2 Beef Cheese Enchiladas</strong> — Two beef enchiladas</li>
+            <li><strong>#3 Shrimp Tacos</strong> — Two grilled shrimp tacos</li>
+            <li><strong>#4 Tamales</strong> — Two pork tamales, chile con carne sauce</li>
+            <li><strong>#5 Al Pastor Tacos</strong> — Three tacos, ranchero beans, pico, guac</li>
+            <li><strong>#6 Cheese Enchiladas</strong> — Two cheese enchiladas</li>
+            <li><strong>#7 Burrito Flaco</strong> — Refried beans &amp; ground beef</li>
+            <li><strong>#8 Crispy/Soft Tacos</strong> — Two tacos, ground beef</li>
+            <li><strong>#9 Burrito Gordo</strong> — Beans, beef, lettuce, jalapeños</li>
+            <li><strong>#10 Enchiladas Suizas</strong> — Two chicken enchiladas, suiza sauce</li>
+            <li><strong>Quesadillas</strong> — Cheese, grilled onions, tomatoes, jalapeños</li>
+            <li><strong>Fiesta Nachos</strong> — <span class="price">$11.95</span> — Al pastor, chicken &amp; steak fajita nachos</li>
+          </ul>
+        </article>
+
+        <!-- DESSERTS -->
+        <article class="dish-card" data-category="dessert">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Sopapillas <span class="price">$5.95</span></h3>
+          <p class="dish-desc">Puffy and flaky fried dough dusted with cinnamon sugar and topped with Louisiana honey.</p>
+        </article>
+
+        <article class="dish-card" data-category="dessert">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Tres Leches Cake <span class="price">$5.95</span></h3>
+          <p class="dish-desc">Moist sponge cake topped with whipped cream and chocolate sauce.</p>
+        </article>
+
+        <article class="dish-card" data-category="dessert">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">Churros <span class="price">$5.95</span></h3>
+          <p class="dish-desc">Traditional Mexican fried sticks of pastry rolled in cinnamon and sugar.</p>
+        </article>
+
+        <!-- A LA CARTA — compact list card -->
+        <article class="dish-card dish-card--list" data-category="dessert">
+          <span class="dish-card-band band--red"></span>
+          <h3 class="dish-name">A La Carta</h3>
+          <p class="dish-desc">Order any of these on the side.</p>
+          <ul class="combo-list">
+            <li><span>Enchilada</span><span class="price">$3.95</span></li>
+            <li><span>Tamale</span><span class="price">$3.95</span></li>
+            <li><span>Guacamole</span><span class="price">$3.50</span></li>
+            <li><span>Beans</span><span class="price">$2.50</span></li>
+            <li><span>Mexican Rice</span><span class="price">$2.50</span></li>
+            <li><span>Soft Fajita Taco</span><span class="price">$4.50</span></li>
+            <li><span>Barbacoa / Tongue Taco</span><span class="price">$3.75</span></li>
+            <li><span>Sope / Tostada</span><span class="price">$3.75</span></li>
+            <li><span>Shrimp / Fish Taco</span><span class="price">$4.50</span></li>
+            <li><span>Jalapeños Toreados</span><span class="price">$3.50</span></li>
+            <li><span>Queso Dip</span><span class="price">$3.50</span></li>
+            <li><span>Crispy / Soft Taco</span><span class="price">$3.75</span></li>
+          </ul>
+        </article>
+
+      </div>
+
+      <p class="menu-gratuity">18% gratuity included in parties of six or more.</p>
+
+      <div class="full-menu">
+        <p class="eyebrow">The Full Printed Menu</p>
+        <h3 class="section-title section-title--sm">Browse Every Page</h3>
+        <div class="menu-scans">
+          <button class="menu-scan" data-index="0"><img src="images/menu-page-1.jpg" alt="Si Señor menu — Lunch Combos and Salads"></button>
+          <button class="menu-scan" data-index="1"><img src="images/menu-page-2.jpg" alt="Si Señor menu — Appetizers and Salads"></button>
+          <button class="menu-scan" data-index="2"><img src="images/menu-page-3.jpg" alt="Si Señor menu — Nachos, Burgers, Po-Boys, Desserts, A La Carta"></button>
+          <button class="menu-scan" data-index="3"><img src="images/menu-page-4.jpg" alt="Si Señor menu — The Grill"></button>
+          <button class="menu-scan" data-index="4"><img src="images/menu-page-5.jpg" alt="Si Señor menu — Favorite Dishes"></button>
+          <button class="menu-scan" data-index="5"><img src="images/menu-page-6.jpg" alt="Si Señor menu — Egg Dishes, Shrimp Ceviche, Traditional Mexican Soups, Birria Chimi"></button>
+          <button class="menu-scan" data-index="6"><img src="images/menu-page-7.jpg" alt="Si Señor menu — Enchiladas, Burritos, Chimichangas"></button>
+        </div>
+        <p class="menu-scans-hint">Tap a page to zoom in</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- scalloped bunting divider -->
+  <div class="bunting bunting--alt" aria-hidden="true"></div>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="gallery-section" id="gallery">
+    <div class="section-inner">
+      <p class="eyebrow eyebrow--light">A Little Bit of Everything</p>
+      <h2 class="section-title section-title--light">Around the Restaurant</h2>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <button class="gallery-item gallery-item--tall" data-index="0"><img src="images/gallery-storefront-sunset.webp" alt="Si Señor pink storefront at sunset with the Mexican Food sign"></button>
+        <button class="gallery-item" data-index="1"><img src="images/gallery-queso.webp" alt="Queso fundido appetizer with warm tortillas"></button>
+        <button class="gallery-item" data-index="2"><img src="images/gallery-margaritas.webp" alt="Margaritas with chips and salsa"></button>
+        <button class="gallery-item gallery-item--tall" data-index="3"><img src="images/gallery-mariachi-statue.webp" alt="Folk-art mariachi musician statue on the porch"></button>
+        <button class="gallery-item" data-index="4"><img src="images/gallery-fajita-salad.webp" alt="Grilled steak fajita salad"></button>
+        <button class="gallery-item" data-index="5"><img src="images/gallery-dining-room.webp" alt="Colorful dining room with folk-art wall decor"></button>
+        <button class="gallery-item" data-index="6"><img src="images/gallery-vw-beetle.webp" alt="Vintage rusted VW Beetle planter out front"></button>
+        <button class="gallery-item gallery-item--tall" data-index="7"><img src="images/gallery-luchador-mural.webp" alt="Luchador mural on the pink porch"></button>
+        <button class="gallery-item" data-index="8"><img src="images/gallery-nachos.webp" alt="Loaded steak nachos plate"></button>
+        <button class="gallery-item" data-index="9"><img src="images/gallery-enchilada.webp" alt="Enchilada plate with rice and beans"></button>
+        <button class="gallery-item" data-index="10"><img src="images/gallery-neon-wall.webp" alt="Wall of vintage photos and neon beer signs"></button>
+        <button class="gallery-item gallery-item--tall" data-index="11"><img src="images/gallery-family-dining.webp" alt="Family enjoying dinner under neon signs"></button>
+        <button class="gallery-item" data-index="12"><img src="images/gallery-storefront-day.webp" alt="Si Señor storefront during the day with garden art"></button>
+        <button class="gallery-item" data-index="13"><img src="images/gallery-wall-blue.webp" alt="Blue mural wall with vintage photographs"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about-section" id="about">
+    <div class="about-bg" style="background-image:url('images/gallery-wall-blue.webp')"></div>
+    <div class="about-scrim"></div>
+    <div class="section-inner about-inner">
+      <h2 class="section-title section-title--light">About Our Restaurant</h2>
+
+      <div class="about-placeholder">
+        <!-- Replace this paragraph with your restaurant's biography. -->
+        <p>Si Señor, established in 2013, is a lively and authentic family-owned Mexican restaurant in St. Mary parish. Owner Enrique Loza has been serving the community for decades by filling both stomachs and hearts. 
+          Since a young age, Enrique served in the restaurant industry, building a name for himself as the kind and caring figure that customers could rely on. Beyond the food, Enrique would engage with the
+          community by coaching the youth as a soccer coach. Now, he partners with other local businesses to fundraise and stimulate the economy to help grow our beautiful parish into something even better. 
+          Don't take our word for it, ask anyone in town about the Loza family and everyone will tell you exactly how kind, caring, and loving this family is. Or come in and see for yourself!</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="section-inner footer-grid">
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="Si Señor logo" class="footer-logo">
+      <p>1201 Bellview St, Morgan City, LA 70380</p>
+      <p><a href="tel:9854126780">(985) 412-6780</a></p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Hours</h3>
+      <p>Mon – Sat<br>11:00 AM – 2:00 PM<br>5:00 PM – 8:00 PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Explore</h3>
+      <p><a href="#menu">Menu</a></p>
+      <p><a href="#gallery">Gallery</a></p>
+      <p><a href="#about">About Us</a></p>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=1201+Bellview+St+Morgan+City+LA+70380" target="_blank" rel="noopener">Directions</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Si Señor Mexican Restaurant · De Poca Madre</p>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">&#8249;</button>
+  <img src="" alt="" class="lightbox-img" id="lightbox-img">
+  <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">&#8250;</button>
+  <p class="lightbox-caption" id="lightbox-caption"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
